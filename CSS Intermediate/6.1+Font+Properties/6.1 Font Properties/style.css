@@ -1,0 +1,23 @@
+#color{
+    color: coral;
+}
+
+#fontsize{
+    font-size: 2rem;
+}
+
+#fontweight{
+    font-weight: 900;
+}
+
+#fontfamily{
+    font-family: 'Caveat',sans-serif;
+}
+
+#aligntext{
+    text-align: right;
+}
+
+html{
+    font-size: 30px;
+}
