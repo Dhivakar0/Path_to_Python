@@ -11,6 +11,7 @@ password = os.environ["password"]
 recipient_email = os.environ["recipient_email"]
 
 url = "https://appbrewery.github.io/instant_pot/"
+# url = "https://www.amazon.com/dp/B075CYMYK6?psc=1&ref_=cm_sw_r_cp_ud_ct_FM9M699VKHTT47YD50Q6"
 headers = {
     "Accept-Language": "en-US,en;q=0.9",
     "Sec-Ch-Ua-Platform": "\"Windows\"",
