@@ -26,22 +26,22 @@ webpage = response.text
 soup = BeautifulSoup(webpage,"html.parser")
 product = soup.select_one("#productTitle")
 product_title =  " ".join(product.getText(strip=True).split())
-print(product_title)
+print(product)
 # current_price = float(soup.select_one(".aok-offscreen").getText().strip()[1:6])
 current_price = float(soup.select_one(".a-price-whole").getText().replace(",","").replace(".",""))
 print(current_price)
 
 lowest_price = 5000.00
 
-if current_price < lowest_price:
-    try:
-        with smtplib.SMTP(host="smtp.gmail.com",port=587) as connection:
-            connection.starttls()
-            connection.login(my_email,password)
-            connection.sendmail(my_email,recipient_email,msg=f"Subject:Amazon Price Alert!\n\n{product_title} is now ${current_price}.".encode("utf-8"))
-        print("Email sent successfully!")
-    except Exception as e:
-        print(f"Error sending mail: {e}.")
+# if current_price < lowest_price:
+#     try:
+#         with smtplib.SMTP(host="smtp.gmail.com",port=587) as connection:
+#             connection.starttls()
+#             connection.login(my_email,password)
+#             connection.sendmail(my_email,recipient_email,msg=f"Subject:Amazon Price Alert!\n\n{product_title} is now ${current_price}.".encode("utf-8"))
+#         print("Email sent successfully!")
+#     except Exception as e:
+#         print(f"Error sending mail: {e}.")
 
 
 
