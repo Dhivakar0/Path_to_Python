@@ -33,15 +33,15 @@ print(current_price)
 
 lowest_price = 5000.00
 
-# if current_price < lowest_price:
-#     try:
-#         with smtplib.SMTP(host="smtp.gmail.com",port=587) as connection:
-#             connection.starttls()
-#             connection.login(my_email,password)
-#             connection.sendmail(my_email,recipient_email,msg=f"Subject:Amazon Price Alert!\n\n{product_title} is now ${current_price}.".encode("utf-8"))
-#         print("Email sent successfully!")
-#     except Exception as e:
-#         print(f"Error sending mail: {e}.")
+if current_price < lowest_price:
+    try:
+        with smtplib.SMTP(host="smtp.gmail.com",port=587) as connection:
+            connection.starttls()
+            connection.login(my_email,password)
+            connection.sendmail(my_email,recipient_email,msg=f"Subject:Amazon Price Alert!\n\n{product_title} is now ${current_price}.".encode("utf-8"))
+        print("Email sent successfully!")
+    except Exception as e:
+        print(f"Error sending mail: {e}.")
 
 
 
